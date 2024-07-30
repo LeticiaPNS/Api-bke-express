@@ -1,0 +1,25 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "API Node Express para o Backend do 2 semestre de 2024 (3 Modulo) IFSP",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeticiaPNS/Api-bke-express.git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "zod",
+    "mvc"
+  ],
+  "author": "Leticia Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeticiaPNS/Api-bke-express/issues"
+  },
+  "homepage": "https://github.com/LeticiaPNS/Api-bke-express#readme"
+}
