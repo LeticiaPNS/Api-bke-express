@@ -4,7 +4,7 @@
   "description": "API Node Express para o Backend do 2 semestre de 2024 (3 Modulo) IFSP",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/sever.js"
   },
   "repository": {
     "type": "git",
