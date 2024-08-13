@@ -2,9 +2,11 @@
   "name": "api-bke-express",
   "version": "1.0.0",
   "description": "API Node Express para o Backend do 2 semestre de 2024 (3 Modulo) IFSP",
+  "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/sever.js"
+    "start": "node src/sever.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/LeticiaPNS/Api-bke-express/issues"
   },
-  "homepage": "https://github.com/LeticiaPNS/Api-bke-express#readme"
+  "homepage": "https://github.com/LeticiaPNS/Api-bke-express#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
