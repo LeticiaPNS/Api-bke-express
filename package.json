@@ -1,12 +1,19 @@
+
 {
-  "name": "api-bke-express",
+  "name": "api-bke-express-2sem2024",
   "version": "1.0.0",
-  "description": "API Node Express para o Backend do 2 semestre de 2024 (3 Modulo) IFSP",
-  "type": "module",
+  "description": "API Node com Express para o Backend do 2 Semestre de 2024 (3 Modulo) IFSP",
   "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/sever.js",
-    "dev": "node --watch src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "prisma:pull": "npx prisma db pull --schema=./prisma/schema-production.prisma",
+    "prisma:push": "npx prisma db push --schema=./prisma/schema-production.prisma",
+    "prisma:generate": "npx prisma generate --schema=./prisma/schema-production.prisma",
+    "prisma:local:pull": "npx prisma db pull --schema=./prisma/schema-local.prisma",
+    "prisma:local:push": "npx prisma db push --schema=./prisma/schema-local.prisma",
+    "prisma:local:generate": "npx prisma generate --schema=./prisma/schema-local.prisma"
   },
   "repository": {
     "type": "git",
@@ -25,6 +32,11 @@
   },
   "homepage": "https://github.com/LeticiaPNS/Api-bke-express#readme",
   "dependencies": {
+    "@prisma/client": "^5.19.0",
+    "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.0"
   }
 }
