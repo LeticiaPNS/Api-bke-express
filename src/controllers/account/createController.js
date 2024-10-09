@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 import { create } from "../../models/accountModel.js"
+=======
+import { create, accountValidateToCreate } from "../../models/accountModel.js"
+>>>>>>> a562deb6d59a179d7ce7ad8fd9ffe57d9a56d7a3
 
 const createController = async (req, res, next) => {
     try{
         const account = req.body
+<<<<<<< HEAD
         const result = await create(account)
+=======
+
+        const accountValidated = accountValidateToCreate(account)
+
+        if(accountValidated?.error)
+            return res.status(401).json({
+                error: "Erro ao criar conta!",
+                fieldErrors: accountValidated.error.flatten().fieldErrors
+            })
+
+        const result = await create(accountValidated.data)
+>>>>>>> a562deb6d59a179d7ce7ad8fd9ffe57d9a56d7a3
 
         if(!result)
             return res.status(401).json({
